@@ -1,5 +1,4 @@
-from stellar_sdk import Account, Asset, Server, Keypair, TransactionBuilder, Network
-import requests
+from stellar_sdk import Asset, Server, Keypair, TransactionBuilder, Network
 
 # 1. Load Keys
 server = Server("https://horizon-testnet.stellar.org")

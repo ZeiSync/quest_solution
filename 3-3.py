@@ -1,5 +1,5 @@
 from time import sleep
-from stellar_sdk import Account, Asset, ClaimPredicate, Claimant, Server, Keypair, TransactionBuilder, Network
+from stellar_sdk import Asset, ClaimPredicate, Claimant, Server, Keypair, TransactionBuilder, Network
 import requests
 
 # 1. Load Keys

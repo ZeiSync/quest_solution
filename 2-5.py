@@ -1,6 +1,4 @@
-from email.mime import base
-from stellar_sdk import Asset, Server, Keypair, Signer, TransactionBuilder, Network, TrustLineFlags
-import requests
+from stellar_sdk import Asset, Server, Keypair, TransactionBuilder, Network, TrustLineFlags
 
 # 1. Load Keys
 server = Server("https://horizon-testnet.stellar.org")

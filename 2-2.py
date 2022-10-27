@@ -1,4 +1,3 @@
-from unicodedata import name
 from stellar_sdk import Asset, Server, Keypair, TransactionBuilder, Network
 import requests
 
