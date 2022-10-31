@@ -1,3 +1,4 @@
+import requests
 from stellar_sdk import Asset, Server, Keypair, Signer, TransactionBuilder, Network
 
 # 1. Load Keys
@@ -8,11 +9,19 @@ quest_account_pub_key = stellar_quest_keypair.public_key
 quest_account_priv_key = stellar_quest_keypair.secret
 
 random_keypair_one = Keypair.random()
+url = "https://friendbot.stellar.org"
+frientbot_response_one = requests.get(url, params={"addr": random_keypair_one.public_key})
+print("random_keypair_one public key: ", random_keypair_one.public_key)
+print("random_keypair_one scret key: ", random_keypair_one.secret)
 secondary_singer = Signer.ed25519_public_key(
     account_id=random_keypair_one.public_key,
     weight=2
 )
+
 random_keypair_two = Keypair.random()
+frientbot_response_two = requests.get(url, params={"addr": random_keypair_two.public_key})
+print("random_keypair_two public key: ", random_keypair_two.public_key)
+print("random_keypair_two scret key: ", random_keypair_two.secret)
 third_signer = Signer.ed25519_public_key(
     account_id=random_keypair_two.public_key,
     weight=2
