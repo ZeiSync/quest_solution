@@ -14,8 +14,6 @@ print("Building Transaction...")
 base_fee = server.fetch_base_fee()
 stellar_account = server.load_account(quest_account_pub_key)
 
-print('IF IT FAILS CHECK THE TESTNET ORDERBOOK AND CHANGE DEST ASSET')
-
 noodleAsset = Asset(
     code="NOODLE",
     issuer=quest_keypair.public_key,
