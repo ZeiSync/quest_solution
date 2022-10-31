@@ -1,3 +1,4 @@
+import requests
 from stellar_sdk import Asset, Server, Keypair, TransactionBuilder, Network
 
 # 1. Load Keys
@@ -9,6 +10,11 @@ stellar_quest_keypair = Keypair.from_secret(
 sponsorKeypair=Keypair.from_secret(
     "SECRET"
 )
+sponsorKeypair = Keypair.random()
+url = "https://friendbot.stellar.org"
+frientbot_response= requests.get(url, params={"addr": sponsorKeypair.public_key})
+print("sponsorKeypair public key: ", sponsorKeypair.public_key)
+print("sponsorKeypair scret key: ", sponsorKeypair.secret)
 
 # 2. Transaction
 # you're a bit overeager and funded your Quest Account with the Fund button
